@@ -1,0 +1,24 @@
+1.. create a sample django app that has some api end points 
+
+ a))creating addUser
+   ##note JsonResponse is imported from django.http
+          JsonResponse needs data(dict) to be returned 
+
+def addUser(request):
+    val={
+        'response':'User Added'
+
+    }
+    print("hello addUser")
+    status=200
+    return JsonResponse(val,status=status)
+
+
+###Jsonrespon_le_pani_afai_display_hune_rahecha_bothin_page_and_console
+===>after yo if we run the server and go to this Url 
+first)in the web page
+     {"response": "User Added"}
+
+second) in the console
+         hello addUser
+        [29/Sep/2021 00:01:50] "GET /addUser HTTP/1.1" 200 26

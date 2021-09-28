@@ -1,8 +1,8 @@
-# from django.contrib import admin
-# from django.urls import path
-# from . import views
 
-# urlpatterns = [
+from django.urls import path
+from . import views
+
+urlpatterns = [
     
-#     path('',),
-# ]
+    path("addUser",views.addUser,name="addUser"),
+]
