@@ -25,4 +25,11 @@ second) in the console
 
 
 b))addSomething
-c))
+
+c)) addNew/<somerandomnum> 
+##note status 500 is Internal server error
+
+this returns 500 if some random num is > 50
+
+
+d)) 

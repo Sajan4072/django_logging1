@@ -15,3 +15,10 @@ def addUser(request):
 def addSomething(request):
     val={'response':'something added'}
     return JsonResponse(val,status=200)
+
+def addNew(request,someNumber):
+    val={'response':'something Added New','numberGiven':int(someNumber)}
+    if int(someNumber) > 50:
+        return JsonResponse(val,status=500)
+    else:
+        return JsonResponse(val,status=200)    
