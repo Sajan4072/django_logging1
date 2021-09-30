@@ -10,3 +10,8 @@ def addUser(request):
     print("hello addUser")
     status=200
     return JsonResponse(val,status=status)
+
+
+def addSomething(request):
+    val={'response':'something added'}
+    return JsonResponse(val,status=200)
