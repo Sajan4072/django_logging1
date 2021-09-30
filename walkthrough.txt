@@ -68,6 +68,26 @@ d))works same
 
 
 3..
+now the idea is to have the logs of our django application(rather than 
+having to observe the console) it be saved in our logs
+
+
+4..add the log configuration in setting.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
