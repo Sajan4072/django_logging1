@@ -40,7 +40,25 @@ here, we make an actual exceptional error and sending the traceback into my fron
    but the use of try and except, the except handles the exception that is it prints 
    what is wrong without crashing the prog.``
 
+
+
 2...
+write a notebook to test api 
+
+
+##note practise of requests (import requests
+				url='http://localhost:8000/'
+				res=requests.get(url)
+					or
+				res=requests.get(url+"admin")
+				res.text
+					
+				)
+
+
+                                 
+===>while calling the api 
+
 
 
 
