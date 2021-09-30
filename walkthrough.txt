@@ -32,4 +32,32 @@ c)) addNew/<somerandomnum>
 this returns 500 if some random num is > 50
 
 
-d)) 
+d))addNewError
+here, we make an actual exceptional error and sending the traceback into my front command
+
+
+##so basically internal server error without try and except crashes the program 
+   but the use of try and except, the except handles the exception that is it prints 
+   what is wrong without crashing the prog.``
+
+2...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
