@@ -58,6 +58,16 @@ write a notebook to test api
 
                                  
 ===>while calling the api 
+1st run the server and while calling api separately see the console also 
+  a)))calling the first
+the outputs are o(inside calling api folderko pic) in the notebook and console respectively 
+
+b))works same
+c))works same
+d))works same
+
+
+3..
 
 
 
