@@ -134,7 +134,7 @@ LOGGING ={
     'version':1,
     'loggers':{
         'django':{
-            'handlers':[],
+            'handlers':['file'],
             'level':'DEBUG'
         }
 
@@ -144,10 +144,15 @@ LOGGING ={
             'level':'DEBUG',
             'class':'logging.FileHandler',
             'filename':'./logs/debug.log',
+            'formatter':'simpleRe'
         }
 
     },
     'formatters':{
+        'simpleRe':{
+            'format':'{levelname}{message}',
+            'style':'{'
+        }
 
     }
 } 

@@ -152,7 +152,7 @@ LOGGING ={
     'version':1,
     'loggers':{
         'django':{
-            'handlers':[],
+            'handlers':['file'],
             'level':'DEBUG'
         }
 
@@ -174,13 +174,84 @@ LOGGING ={
 
 
 5..
+now for the formatters it would also have some configurations
+
+=>
+simpleRe is random name which has 
+     (format,style) 
+the default style of the python midule is the percent mark
+but we use { , it gives the info of how to save the log 
+when the next msg comes whether to append it immeadeately or  append with the next line all
+this info is provided 
+
+
+import os 
+
+LOGGING ={
+    'version':1,
+    'loggers':{
+        'django':{
+            'handlers':['file'],
+            'level':'DEBUG'
+        }
+
+    },
+    'handlers':{
+        'file':{
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename':'./logs/debug.log',
+        }
+
+    },
+    'formatters':{
+        'simpleRe':{
+            'format':'{levelname}{message}',
+            'style':'{'
+        }
+
+    }
+} 
 
 
 
+=>after defining formatter introduce it to our configuration
+
+import os 
+
+LOGGING ={
+    'version':1,
+    'loggers':{
+        'django':{
+            'handlers':['file'],
+            'level':'DEBUG'
+        }
+
+    },
+    'handlers':{
+        'file':{
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename':'./logs/debug.log',
+            'formatter':'simpleRe' ///yaha
+        }
+
+    },
+    'formatters':{
+        'simpleRe':{
+            'format':'{levelname}{message}',
+            'style':'{'
+        }
+
+    }
+} 
 
 
+6.. lets experiment a bit 
 
-
+in logger let level be debug 
+but in handler let it be info 
+create new debug file (debug2)
 
 
 
