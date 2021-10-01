@@ -273,7 +273,7 @@ logger.info('some message')
 its result [pic3]
 
 
-8...
+8...multiple handlers in logging Configuration left 
 
 
 
