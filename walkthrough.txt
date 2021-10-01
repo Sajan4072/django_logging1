@@ -253,6 +253,9 @@ in logger let level be debug
 but in handler let it be info 
 create new debug file (debug2)
 
+in formatters add new formats such as time,module,process thread,msg and many more
+(pic=experiment1)
+
 
 
 
