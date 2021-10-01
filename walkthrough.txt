@@ -75,15 +75,105 @@ having to observe the console) it be saved in our logs
 4..add the log configuration in setting.py
 
 
+=>logging configuration would have 4 parts 
+but in our scenario right now we only care about logger, handler,formater
+import os 
+
+LOGGING ={
+    'loggers':{
+
+    },
+    'handlers':{
+
+    },
+    'formatters':{
+        
+    }
+} 
+
+
+=>to define loggers, there are some standard starting point which comes with the django by default
+ those starting django loggers are(django,django.request,django.server,django.db.backend etc)
+
+each logger has different purpose and it serves a particular job 
+
+eg , if i provide only django ,it will catch everything available in taht execution
+    and the level or the default level for the Django logger is debug 
+
+
+==>if i have loggers  
+ i can use any number of loogers(with different types)
+ and have to define what to do with those in handlers
+
+==>in our case we start with defining django logger, with attributes(handlers,level)
+import os 
+
+LOGGING ={
+    'loggers':{
+        'django':{
+            'handlers':[],
+            'level':'DEBUG'
+        }
+
+    },
+    'handlers':{
+
+    },
+    'formatters':{
+
+    }
+} 
+
+
+==>now we have to configure the handlers 
+in here, the name file can be anything
+ for the handler(named file), we define the configuration
+                            ==> i)i.e leve(what level??)
+                       ##note about level
+         		 if we have debug in my handler then ,
+			 whatever is coming from the loggers would go to hanler and it
+			 then would again decide what kind of log level i Have to cater
+
+                        ##if we provide Info as level in handler but Debug as level in logger
+			  then handler would filter and say whatever logs comes above info or info itslef
+  			  I would only care about those
+				
+				
+				ii)class-you can have any kind of handlers you want 
+				from the logging module of python
+
+
+				iii)file name-we create a logs folder and files which we want to use and give its path
+
+eg,
+import os 
+
+LOGGING ={
+    'version':1,
+    'loggers':{
+        'django':{
+            'handlers':[],
+            'level':'DEBUG'
+        }
+
+    },
+    'handlers':{
+        'file':{
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename':'./logs/debug.log',
+        }
+
+    },
+    'formatters':{
+
+    }
+} 
 
 
 
 
-
-
-
-
-
+5..
 
 
 
