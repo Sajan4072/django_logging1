@@ -3,13 +3,16 @@ from django.http import JsonResponse
 
 
 import logging,traceback
+logger=logging.getLogger('django')
+
+
 # Create your views here.
 def addUser(request):
     val={
         'response':'User Added'
 
     }
-    print("hello addUser")
+    # print("hello addUser")
     status=200
     return JsonResponse(val,status=status)
 

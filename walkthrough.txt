@@ -258,9 +258,22 @@ in formatters add new formats such as time,module,process thread,msg and many mo
 
 
 
+#####extra
+7... Logging module in views for adding print statements in django
+to do so 
+ 
+=>add
+logger=logging.getLogger('django)
+
+=>now, 
+we can print by 
+logger.info('some message')
+[pic2]
+
+its result [pic3]
 
 
-
+8...
 
 
 
